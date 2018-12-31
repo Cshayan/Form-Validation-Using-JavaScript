@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Validation using JS</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-show-password/1.0.3/bootstrap-show-password.min.js"></script>
+
+
+    <!--Link to the CSS file-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        
+<div class="container-fluid ">
+    <div class="row">
+<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div id="message1" style="display: none;">  
+                <p id="passReVerify" class="invalid">Two passwords do not match!</p>
+        </div>        
+        <div id="message2" style="display: none;">  
+            <p id="emailVerify" class="invalid"></p>
+        </div>        
+</div>    
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="headingForm">
+        <h3>Login</h3>
+    </div>
+        <form class="form-container " action="#">
+            <div class="form-group">
+                <label class="heading" for ="username"><i class="fa fa-user"> Username:</i></label>
+                <input type="text" class="form-control" minlength="3" placeholder="Enter Username" required>
+            </div>
+            <div class="form-group">
+                <label class="heading" for ="email"><i class="fa fa-envelope"> Email:</i></label>
+                <input type="email" id="email" class="form-control" minlength="3" placeholder="Enter Email" required>
+                <div id="messageEmail" style="display: none">
+                        <p id="mail" class="invalidEmail"></p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="heading" for ="psw"><i class="fa fa-lock"> Password:</i></label>
+                <input type="password" id="psw" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter Password" required>
+                <div style="float: right; margin-top: 2px" class="checkbox">
+                        <label class="heading1"><input id="passStatus"  type="checkbox" onclick="passwordToggle()"> Show</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="heading" for ="re-password"><i class="fa fa-lock"> Confirm password:</i></label>
+                <input type="password" id="rePsw" class="form-control"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Re-type the password" required>
+            </div>
+            <div class="form-group">
+                <button class ="btn btn-info btn-block">Submit</button> 
+            </div>
+        </form>
+    </div>  
+    
+<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+   <div id= "message" style="display: none">
+    <h5>Password should have the following: </h5>
+        <p id ="letter"  class="invalid">Must contain atleast one <b>lower letter</b></p>
+        <p id ="capital" class="invalid">Must contain atleast one <b>capital letter</b></p>
+        <p id ="number" class="invalid">Must contain atleast one <b>number letter</b></p>
+        <p id ="length" class="invalid">Must contain more than 8<b> characters</b></p>
+        <p id="specialChar" class="invalid">Must contain atleast one <b>special character</b></p>
+   </div>
+</div> 
+</div>
+</div>
+<script src="scriptCheck.js"></script>
+</body>
+</html>

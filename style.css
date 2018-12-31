@@ -1,0 +1,346 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei");
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  background: url("sky.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body .form-container {
+  border: 0px solid black;
+  padding: 40px 40px;
+  -webkit-transform: translateY(28%);
+          transform: translateY(28%);
+  max-width: 1000px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 7px 74px 29px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 7px 74px 29px rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+}
+
+body .form-container #messageEmail {
+  color: black;
+  width: 5%;
+  position: absolute;
+  margin-left: 41ch;
+  margin-top: -5vh;
+  border-radius: 10px;
+}
+
+body .form-container .invalidEmail {
+  color: red;
+}
+
+body .form-container .invalidEmail:before {
+  content: "✖";
+  position: relative;
+  left: 2px;
+}
+
+body .form-container .validEmail {
+  color: green;
+}
+
+body .form-container .validEmail:before {
+  content: "✔";
+  position: relative;
+  left: 2px;
+}
+
+body .form-container .heading {
+  color: black;
+}
+
+body .form-container .heading1 {
+  color: #f6b93b;
+}
+
+body label {
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+body #message {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 10px;
+  margin-top: 40vh;
+  width: 70%;
+}
+
+body #message1 {
+  color: black;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  margin-top: 5vh;
+  width: 70%;
+}
+
+body #message2 {
+  color: black;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  margin-top: 5vh;
+  width: 70%;
+}
+
+body #valid1 {
+  color: green;
+}
+
+body #valid1:before {
+  content: "✔";
+  position: relative;
+  left: -5px;
+}
+
+body .invalid {
+  color: red;
+}
+
+body .invalid:before {
+  content: "✖";
+  position: relative;
+  left: -5px;
+}
+
+body .valid {
+  color: green;
+}
+
+body .valid:before {
+  content: "✔";
+  position: relative;
+  left: -5px;
+}
+
+body .headingForm h3 {
+  font-size: 40px;
+  position: absolute;
+  top: 8vh;
+  margin-bottom: 100px;
+  color: #fff;
+  font-family: 'ZCOOL XiaoWei', serif;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  display: inline-block;
+  border: none;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  margin-bottom: 5px;
+  outline: none;
+  color: black;
+  background: #f1f1f1;
+  -webkit-transition: -webkit-transform .4s;
+  transition: -webkit-transform .4s;
+  transition: transform .4s;
+  transition: transform .4s, -webkit-transform .4s;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+  background-color: lightblue;
+  outline: none;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+input[type=checkbox]:hover {
+  outline: none;
+}
+
+input[type=checkbox]:focus {
+  outline: none;
+}
+
+input[type=checkbox] {
+  outline: none;
+  border: 1px solid black;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background: -webkit-gradient(linear, left bottom, left top, from(#333), to(#000));
+  background: linear-gradient(0deg, #333, #000);
+  width: 40px;
+  height: 15px;
+  position: absolute;
+  left: -10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 0 2px #353535, inset 0 0 0 1px black;
+          box-shadow: 0 0 0 2px #353535, inset 0 0 0 1px black;
+}
+
+input[type=checkbox]:before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000), to(#6b6b6b));
+  background: linear-gradient(0deg, #000, #6b6b6b);
+  height: 11px;
+  width: 20px;
+  border-radius: 9px;
+  -webkit-box-shadow: 0 0 0 2px #232323;
+          box-shadow: 0 0 0 2px #232323;
+  -webkit-transform: scale(0.98, 0.99);
+          transform: scale(0.98, 0.99);
+  -webkit-transition: .5s;
+  transition: .5s;
+  outline: none;
+}
+
+input:checked[type=checkbox]:before {
+  left: 17.5px;
+  outline: none;
+}
+
+input:checked[type=checkbox] {
+  background: -webkit-gradient(linear, left bottom, left top, from(#6dd1ff), to(#20b7ff));
+  background: linear-gradient(0deg, #6dd1ff, #20b7ff);
+  -webkit-box-shadow: 0 0 0 2px #232323;
+          box-shadow: 0 0 0 2px #232323;
+  outline: none;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  body #message {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    margin-top: 1vh;
+    display: block;
+    margin: auto;
+  }
+  body #message1 {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 8px;
+    margin-top: 0vh;
+    width: 70%;
+    margin-left: 50px;
+  }
+  body #message2 {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 8px;
+    margin-top: 0vh;
+    width: 70%;
+    margin-left: 50px;
+  }
+  body .form-container .invalidEmail:before {
+    content: "✖";
+    position: absolute;
+    top: 7px;
+    z-index: 3;
+    left: 2px;
+  }
+  body .form-container .validEmail:before {
+    content: "✔";
+    position: absolute;
+    left: 2px;
+    z-index: 3;
+    top: 7px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  body #message {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    margin-top: 1vh;
+    width: 90%;
+    margin-left: 3ch;
+    display: none;
+  }
+  body #message1 {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 8px;
+    margin-top: 0vh;
+    width: 70%;
+    margin-left: 50px;
+  }
+  body #message2 {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 8px;
+    margin-top: 0vh;
+    width: 70%;
+    margin-left: 50px;
+  }
+  body .form-container .invalidEmail:before {
+    content: "✖";
+    position: absolute;
+    top: 5px;
+    z-index: 3;
+    left: 290px;
+  }
+  body .form-container .validEmail:before {
+    content: "✔";
+    position: absolute;
+    left: 2px;
+    z-index: 3;
+    top: 7px;
+  }
+  body .form-container .heading1 {
+    color: #fff;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+  body #message {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 10px;
+    margin-top: -1vh;
+    width: 110%;
+    margin-left: -2ch;
+  }
+  body #message1 {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 8px;
+    margin-top: 0vh;
+    width: 70%;
+    margin-left: 50px;
+  }
+  body #message2 {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 8px;
+    margin-top: 0vh;
+    width: 70%;
+    margin-left: 50px;
+  }
+  body .form-container .invalidEmail:before {
+    content: "✖";
+    position: relative;
+    left: -7px;
+    top: 7px;
+  }
+  body .form-container .validEmail:before {
+    content: "✔";
+    position: absolute;
+    left: 2px;
+    z-index: 3;
+    top: 7px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
